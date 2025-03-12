@@ -1,0 +1,136 @@
+#Tech Mahindra Interview Questions - L1 (09-03-2025)
+----------------------------------------------------
+
+Difference between Hashtable and ConcurrentHashMap
+What are Stereotype Annotations in Spring?
+Explain Transaction Management in Spring Boot.
+Difference between Optional.of() and Optional.ofNullable() in Java.
+How to handle exceptions in Spring Boot effectively?
+What is Serialization in Java?
+How can you make an object non-serializable in Java?
+What is a Functional Interface? Provide a real-world use case.
+What is a Predicate in Java, and how is it used?
+What is Service Discovery in Microservices? How does it work?
+WAP to find first non-repeating character using stream API.
+@Qualifier Vs @ Primary
+
+# Capgemini Interview Questions - L1 (11-03-2025)
+-------------------------------------------------
+
+1.Write a Java program using Java Streams to perform the following operations on a given sentence:
+Sort the words alphabetically without changing their positions.
+Reverse each word individually without changing their position in the sentence.
+Use functional programming concepts (Streams, Lambda Expressions, and Collectors) to achieve the solution efficiently.  
+Input : I am a java developer
+Output: I a ma repoleved avaj
+
+2. Explain about previous and current project along with challenges you faced on your currect project
+3. What will happen if System.exit(0); is written inside a try block? Will the finally block execute in this case? Explain with an example.
+	Answer - If System.exit() is called inside a try block, the finally block will not execute because System.exit() terminates the JVM immediately, preventing any further execution.
+	public class ExitExample {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Inside try block");
+            System.exit(0);  // JVM terminates here
+        } finally {
+            System.out.println("Inside finally block");  // This will NOT execute
+        }
+    }
+}
+4. application.property  Vs application.yml
+
+
+# Capgemini Interview Questions - L1 (12-03-2025)
+====================================================
+1.Write a Java program that takes a list of numeric strings, converts them into integers, squares each integer, and prints the squared values using Java Streams and Lambda expressions.
+2. Design Global exception class ?
+  Ans.
+  
+package com.javainterview.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalException {
+
+    // Handles all generic exceptions
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<CustomResponse> handleException(Exception ex) {
+        CustomResponse custRes = new CustomResponse();
+        custRes.setMessage("An unexpected error occurred: " + ex.getMessage());
+        custRes.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return new ResponseEntity<>(custRes, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+}
+
+3.What are the different Spring Bean Scopes in Spring Boot?
+  Ans.
+Singleton (Default) – A single instance is created and shared across the application.
+Prototype – A new instance is created each time the bean is requested.
+Request (Web-based) – A new bean instance is created for each HTTP request.
+Session (Web-based) – A single bean instance is created per HTTP session.
+Application (Web-based) – A single bean instance is created per ServletContext.
+WebSocket – A single bean instance per WebSocket connection.
+
+4.What is the Spring Bean Life Cycle?
+ Ans.
+Instantiation – Spring container creates the bean.
+Dependency Injection – Dependencies are injected.
+Initialization – Custom initialization logic runs (@PostConstruct).
+Ready to Use – Bean is available for use.
+Destruction – Cleanup logic runs (@PreDestroy) before the bean is destroyed.
+
+5.What is the difference between an Error and an Exception in Spring Boot?
+ Ans.
+ An Error in Java represents a serious system-level issue that usually cannot be recovered from or handled using try-catch.
+  Errors typically indicate problems related to the JVM, such as OutOfMemoryError, StackOverflowError, or VirtualMachineError. 
+  These issues occur at the system level and are not meant to be caught or handled by the application, as they indicate fundamental 
+  failures that require system intervention or configuration changes.
+
+On the other hand, an Exception represents an application-level issue that can be anticipated and handled using try-catch blocks.
+Exceptions occur due to logical errors, invalid inputs, or unexpected situations in the program, such as NullPointerException, 
+IOException, or ArithmeticException. Unlike errors, exceptions can be managed within the application using proper exception handling 
+techniques like try-catch, throws, and finally, allowing the program to recover gracefully from unexpected conditions.
+ 
+6.Garbage Collection in Java ?
+Garbage collection (GC) in Java is an automatic memory management process that helps reclaim memory occupied by objects that are no longer in use. 
+The Java Virtual Machine (JVM) automatically runs garbage collection to free up memory and prevent memory leaks. It removes objects that are unreachable 
+or no longer referenced by any active thread.
+
+7.What is ConcurrentModificationException?
+A ConcurrentModificationException occurs when a collection (like ArrayList, HashMap) is modified while being iterated using an Iterator or for-each loop. 
+This happens because most Java collections fail-fast—they detect changes and throw an exception
+to prevent inconsistent behavior.
+
+public class ConcurrentModificationExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+
+        for (String s : list) {  // Throws ConcurrentModificationException
+            if (s.equals("B")) {
+                list.remove(s);
+            }
+        }
+    }
+}
+
+8.How Does System.gc() Work?
+The System.gc() method is a request to the JVM to run the garbage collector. However, 
+it does not guarantee that garbage collection will occur immediately. The JVM decides whether to execute 
+it based on its internal memory management.
+
+9.What is Spring Context?
+Definition:
+The Spring Context (also known as the ApplicationContext) is the central container in a Spring application that manages the 
+lifecycle, configuration, and dependencies of Spring beans. It provides a way to access and manage beans (components) defined in a Spring application.
+
+9.Cyclic Dependency in Spring
+Ans:
+A cyclic dependency occurs in Spring when two or more beans depend on each other, causing an infinite loop during bean instantiation. This results in a 
+BeanCurrentlyInCreationException at runtime.
