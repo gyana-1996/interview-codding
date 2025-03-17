@@ -1,0 +1,19 @@
+1. Student
+-------
+Id Subject Marks
+1  Maths    80
+1  Science  70
+1  English   75
+2  Maths    90
+2  Science  60
+2  English   85
+3  Maths    85
+3  Science  60
+3  English   75
+Find the Highest marks in each subject ?
+Ans. 
+
+SELECT Subject, MAX(Marks) AS Max_Marks
+FROM Student
+GROUP BY Subject;
+

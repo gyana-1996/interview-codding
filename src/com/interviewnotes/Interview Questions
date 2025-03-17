@@ -134,3 +134,79 @@ lifecycle, configuration, and dependencies of Spring beans. It provides a way to
 Ans:
 A cyclic dependency occurs in Spring when two or more beans depend on each other, causing an infinite loop during bean instantiation. This results in a 
 BeanCurrentlyInCreationException at runtime.
+
+# Capgemini Interview Questions - L1 (13-03-2025)
+====================================================
+
+Question 1: What is a Daemon Thread in Java?
+
+Answer:
+A Daemon thread in Java is a low-priority background thread that runs 
+continuously to support other non-daemon (user) threads. It automatically terminates when 
+all user threads finish execution. It is typically used for tasks like garbage collection, 
+monitoring, and background tasks.
+
+Question 2: What is orchestration in containerized environments?
+
+Answer:
+Orchestration in containerized environments refers to the automated management, 
+deployment, scaling, and networking of containers. It ensures that applications run 
+efficiently by managing multiple container instances.
+
+Question 3: How is Docker implemented?
+
+Answer:
+Docker implementation involves:
+Installing Docker Engine.
+Creating Docker images using a Dockerfile.
+Running containers from images.
+Using docker-compose for multi-container applications.
+Managing containers with Docker CLI or Docker Desktop.
+
+Question 4: What is Kubernetes and how does it work?
+
+Answer:
+Kubernetes is an open-source container orchestration platform that automates deployment, scaling, and management of containerized applications. 
+It works using components such as pods, nodes, services, and controllers to maintain application availability and scalability.
+
+Question 5: What are the benefits of using Spring Boot?
+
+Answer:
+Spring Boot provides:
+Auto-configuration to reduce setup time.
+Embedded servers like Tomcat and Jetty.
+Production-ready features (e.g., monitoring, health checks).
+Microservices support.
+Easy integration with databases and third-party services.
+
+Question 6: How is MongoDB used in applications?
+
+Answer:
+MongoDB is a NoSQL database used for:
+Storing JSON-like documents with dynamic schemas.
+Handling large-scale applications with high availability.
+Performing real-time analytics.
+Supporting flexible data structures.
+Integration with Spring Boot via Spring Data MongoDB.
+
+Question 7: What is the use of Elasticsearch?
+
+Answer:
+Elasticsearch is a distributed search and analytics engine used for:
+
+Full-text search.
+Log and event data analysis.
+Real-time application monitoring.
+Data visualization with Kibana.
+Scalable data indexing and retrieval.
+
+Question 8: How can MongoDB performance be optimized?
+Answer:
+MongoDB performance can be optimized by:
+Indexing frequently queried fields.
+Using aggregation pipelines efficiently.
+Sharding data across multiple servers.
+Optimizing query execution with explain().
+Caching results and reducing redundant queries.
+Using appropriate schema design (embedded vs. referenced documents).
+
