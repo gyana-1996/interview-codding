@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-
 /*Write a Java program to sort a given HashMap<String, Integer> by its values in ascending order using a separate comparator class.
 \The program should ensure that the order of elements is maintained after sorting.*/
 

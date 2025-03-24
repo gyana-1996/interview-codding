@@ -1,0 +1,50 @@
+https://coderpad.io
+
+1. First Non Repeating Character
+2. ATOI
+3. Group Anagram
+4. Apache Log
+5. Power of 10
+6. Write code to merge 2 sorted arraygf
+7. Dot Product
+8. Snowpack
+9. Robot Code - Right, Left, Up & Down. Find co-ordinates
+10. Relational length code 
+11. Median Sorted Array
+	Find Median, Through Index
+12. Find optimal value for 2nd dimension array
+13. Co-ordinates (Up, Down, Right, Left)
+14. Find minimal subset of integer array
+15. Minimum subarray exceeding given sum
+16. Run Length Encoding
+17. Unique Tuples
+18. Magic Potion Snippet
+19. Second Smallest Snippet
+20. Walking Robot - Find the final co-ordinates based on the path followed
+21. Run Length Encoding
+22. Count Length of Cycle
+23. Longest Uniform Substring
+24. Pangrams - Given a sentence, find the missing letters of alphabet in the sentence
+25. Primefactorization
+26. Pascal's triangle
+27. Circular list
+28. Fractions additions in 2 Arrays
+29. Subarray Exceeding Sum 
+30.  Election Snippet
+31. Find the second smallest number
+32. Mirror a Binary Tree
+33. BFS in Matrix
+34. Unique Tuples
+
+Tips:
+
+For the coderpad interview when it starts explain them the given problem.  Explain the approach / logic to solve the problem.
+You might get cross questioned on different approaches.  Finally implement the logic via coding.  All the test cases should clear
+When you run the code.
+
+Questions
+1. How HashMap works and its internal implementation
+2. Can I use HashMap where multiple threads are accessing/updating it.  Explain further
+3. Implement an Employee & Address class without Dependency Injection/IOC and with Dependency Injection/IOC
+4. Implement Singleton class.  How Singleton and Clone.
+5. Implementation of HashMap
